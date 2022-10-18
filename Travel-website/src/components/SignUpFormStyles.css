@@ -1,0 +1,88 @@
+.form-container{
+    margin: 0rem 6rem 3rem;
+    color:#2a2aa2;
+}
+.form-container h1{
+    font-size: 1.5rem;
+}
+.LogSign{
+    margin-top: 3rem;
+}
+h6{
+    font-size: 15.5px;
+    margin: 22px 0;
+    color: #000;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+.checkbox:checked + label,
+.checkbox:not(:checked) +label{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 60px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: #dd0606;
+    padding: 0;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+label{ 
+    transition: all 2s ease;
+}
+.checkbox:checked + label::before,
+.checkbox:not(:checked) +label::before{
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #dd0606;
+    background: #000;
+    font-family: "Material Icons";
+    content: '\f1e2';
+    z-index: 20;
+    top: -10px;
+    left: -10px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    transition: all 0.5s ease;
+}
+.checkbox:checked + label::before{
+    transform: translateX(44px) rotate(-270deg);
+    transition: all 0.5s ease;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+.form-container input{
+    height: 3rem;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    border: 1px solid #2a2a2a;
+}
+/*
+.SignUp{
+    transform: rotateY(180deg);
+}*/
+@media screen and (max-width:850px){
+    .form-container{
+        margin: 4rem 2rem;
+    }
+    .form-container form{
+        padding-top: 2rem;
+        width: 90%;
+    }
+    button{
+        display: inline;
+    }
+}
